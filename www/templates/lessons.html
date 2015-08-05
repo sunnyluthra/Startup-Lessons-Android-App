@@ -1,0 +1,17 @@
+<ion-view>
+        <ion-slide-box does-continue=true show-pager=false on-slide-changed="slideHasChanged($index)">
+            <ion-slide ng-repeat="lesson in lessons">
+                <ion-content>
+                <div class="lesson">
+                    <h1>
+                        {{lesson.title}}
+                    </h1>
+                </div>
+                </ion-content>
+            </ion-slide>
+        </ion-slide-box>
+    <div class="bar bar-footer">
+        <button class="button button-clear shareIt" title="{{shareTitle}}">Share</button>
+        <button class="button button-clear" ng-click="next()">Next</button>
+    </div>
+</ion-view>
